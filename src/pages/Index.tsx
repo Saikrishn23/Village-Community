@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, ClipboardList, UserCog } from 'lucide-react';
@@ -12,21 +11,22 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="hero-section">
-        <div className="section-container">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl mb-6">
-              Connecting Villages, Solving Problems
-            </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              A community platform that brings together residents, volunteers, and administrators to address and resolve village issues effectively.
+      <section className="py-12 bg-[url('/village-bg.jpg')] bg-cover bg-center relative">
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="section-container relative z-10">
+          <div className="text-center text-white">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Welcome to VillageConnect</h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Empowering communities through technology and collaboration
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/user">
-                <Button size="lg" className="w-full">Report an Issue</Button>
+                <Button size="lg" className="w-full sm:w-auto">Report an Issue</Button>
               </Link>
               <Link to="/volunteer">
-                <Button size="lg" variant="outline" className="w-full">Volunteer Login</Button>
+                <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 backdrop-blur-sm hover:bg-white/20">
+                  Volunteer Login
+                </Button>
               </Link>
             </div>
           </div>
@@ -109,8 +109,12 @@ const Index = () => {
               </Link>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="aspect-video bg-gray-200 rounded-md mb-4 flex items-center justify-center">
-                <span className="text-gray-500">Village Community Image</span>
+              <div className="aspect-video rounded-md overflow-hidden">
+                <img 
+                  src="/village-community.jpg" 
+                  alt="Village Community" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Impact</h3>
               <ul className="space-y-2 text-gray-600">
@@ -187,8 +191,12 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="aspect-video bg-gray-200 rounded-md flex items-center justify-center">
-              <span className="text-gray-500">Map View</span>
+            <div className="aspect-video rounded-md overflow-hidden">
+              <img 
+                src="/village-community.jpg" 
+                alt="Village Community" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

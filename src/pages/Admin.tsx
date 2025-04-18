@@ -1,8 +1,8 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LoginForm from '@/components/LoginForm';
+import AdminSignupForm from '@/components/AdminSignupForm';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -403,55 +403,25 @@ const Admin = () => {
         <>
           <section className="py-12 bg-blue-50">
             <div className="section-container">
-              <div className="text-center">
-                <h1 className="text-4xl font-bold text-gray-900 mb-6">Administrator Login</h1>
+              <div className="text-center mb-8">
+                <h1 className="text-4xl font-bold text-gray-900 mb-6">Administrator Portal</h1>
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                  Access the admin dashboard to manage volunteers and monitor village issues.
+                  Manage your village community and address issues effectively.
                 </p>
               </div>
-            </div>
-          </section>
-          
-          <section className="py-16 bg-white flex-grow">
-            <div className="section-container max-w-4xl">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Administrator Portal</h2>
-                  <p className="text-gray-600 mb-4">
-                    This secure area is for authorized administrators only. Please log in to access the admin dashboard.
-                  </p>
-                  <p className="text-gray-600 mb-4">
-                    As an administrator, you can:
-                  </p>
-                  <ul className="space-y-2 text-gray-600 mb-6">
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold mr-2">•</span>
-                      <span>Add, edit, and manage volunteers</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold mr-2">•</span>
-                      <span>Monitor all reported village issues</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold mr-2">•</span>
-                      <span>Track issue resolution progress</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold mr-2">•</span>
-                      <span>Generate reports on community activity</span>
-                    </li>
-                  </ul>
-                  <div className="bg-yellow-50 border border-yellow-200 rounded-md p-4">
-                    <p className="text-sm text-yellow-800">
-                      <strong>Security Notice:</strong> Never share your administrator credentials with others. Always log out when finished.
-                    </p>
-                  </div>
-                </div>
-                
-                <div>
+              
+              <Tabs defaultValue="login" className="w-full max-w-md mx-auto">
+                <TabsList className="grid w-full grid-cols-2">
+                  <TabsTrigger value="login">Login</TabsTrigger>
+                  <TabsTrigger value="signup">Sign Up</TabsTrigger>
+                </TabsList>
+                <TabsContent value="login">
                   <LoginForm userType="admin" onLogin={handleLogin} />
-                </div>
-              </div>
+                </TabsContent>
+                <TabsContent value="signup">
+                  <AdminSignupForm />
+                </TabsContent>
+              </Tabs>
             </div>
           </section>
         </>

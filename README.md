@@ -1,73 +1,70 @@
-# Welcome to your Lovable project
+# Village Community Platform
 
-## Project info
+A modern web application built to connect village communities, volunteers, and administrators to effectively address and resolve local issues.
 
-**URL**: https://lovable.dev/projects/cd34c368-2741-4044-a998-688b92a3474e
+## Features
 
-## How can I edit this code?
+- **User Portal**: Allows village residents to report issues and track their status
+- **Volunteer Dashboard**: Enables volunteers to manage and resolve reported issues
+- **Admin Interface**: Provides administrative control over the platform
+- **Real-time Updates**: Track issue status and resolution progress
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Shadcn/ui Components
+- React Router
+- React Query
+- Zod for validation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/cd34c368-2741-4044-a998-688b92a3474e) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v14 or higher)
+- npm or yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
+```bash
+git clone https://github.com/Saikrishn23/VillageCommunity-New.git
+cd VillageCommunity-New
+```
 
-Follow these steps:
+2. Install dependencies:
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at http://localhost:5173
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+- `/src` - Source code
+  - `/components` - Reusable UI components
+  - `/pages` - Page components
+  - `/lib` - Utilities and helpers
+  - `/hooks` - Custom React hooks
+  - `/styles` - Global styles
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Contributing
 
-## What technologies are used for this project?
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This project is built with:
+## License
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/cd34c368-2741-4044-a998-688b92a3474e) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is licensed under the MIT License.
